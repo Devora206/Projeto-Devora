@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+nav {
+    background: rgb(255, 255, 255);
+    padding: 15px;
+}
