@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <title>DentalLux</title>
 </head>
 <body>
@@ -31,7 +31,27 @@
 
 <section id="agenda">
     <h1>Agendamento</h1>
-    <p>Aqui vai ficar o formulário depois</p>
+
+    <form id="formAgendamento">
+        <input type="text" name="nome" placeholder="Nome Completo" required>
+
+        <input type="text" name="telefone" placeholder="Telefone" required>
+
+        <input type="email" name="email" placeholder="Email" required>
+
+        <select name="servico">
+            <option value="Limpeza">Limpeza</option>
+            <option value="Consulta">Consulta</option>
+        </select>
+
+        <input type="date" name="data" required>
+
+        <input type="text" name="hora" placeholder="14:00" required>
+
+        <textarea name="observacoes" placeholder="Observações"></textarea>
+
+        <button type="submit">Confirmar Agendamento</button>
+    </form>
 </section>
 
 <section id="contato">
@@ -40,5 +60,6 @@
 </section>
 
 <script src="{{ asset('assets/js/script.js') }}"></script>
+
 </body>
 </html>
