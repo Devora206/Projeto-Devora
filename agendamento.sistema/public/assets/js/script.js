@@ -1,22 +1,30 @@
-document.getElementById('formAgendamento')
-.addEventListener('submit', function(e) {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
 
-    const form = this;
-    const formData = new FormData(form);
+    const form = document.getElementById("formAgendamento");
 
-    fetch('/api/agendamentos', {
-        method: 'POST',
-        body: formData
-    })
-    .then(res => res.json())
-    .then(data => {
-        alert('Agendamento enviado com sucesso!');
-        form.reset();
+    if (form) {
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
 
-        console.log(data);
-    })
-    .catch(err => {
-        console.error('Erro:', err);
-    });
+            const formData = new FormData(form);
+
+            fetch("/api/agendamentos", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Agendamento realizado com sucesso!");
+                
+                form.reset();
+
+                console.log("Sucesso:", data);
+            })
+            .catch(error => {
+                console.error("Erro:", error);
+                alert("Erro ao enviar agendamento");
+            });
+        });
+    }
+
 });
