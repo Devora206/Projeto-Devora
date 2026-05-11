@@ -42,3 +42,10 @@ Navbar com navegação por âncoras:
 - Organização de pastas para o Front-End
 - Rotas básicas configuradas
 - Controller básico implementado
+
+# Projeto: Sistema de pedidos
+Este é um projeto pra otimizar pedidos de um restaurante.
+
+Ao iniciar o desenvolvimento, foi identificado que o repositório do grupo anterior não continha uma estrutura funcional de projeto (ausência de código base, organização de pastas, rotas e implementação inicial).
+
+Dessa forma, foi necessário realizar a criação completa da estrutura do projeto.
