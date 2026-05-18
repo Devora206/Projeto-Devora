@@ -1,31 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Sacola</title>
-
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <title>Sacola - WeBistrô</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/sacola.css') }}">
 </head>
 <body>
 
-<nav>
-    <h2>WeBistrô</h2>
-    <a href="/">⬅ Voltar</a>
-</nav>
+<header>
+    <div class="logo">
+        <div class="logo-circle"></div>
+        <div class="logo-text">
+            <h1>WeBistrô</h1>
+            <span>Cuisine Française</span>
+        </div>
+    </div>
 
-<h1>Sua Sacola</h1>
+    <a href="/">
+        <button class="cart-btn">⬅ Voltar</button>
+    </a>
+</header>
 
-<div class="item">
-    <p>Pizza - R$ 30,00</p>
-</div>
+<main>
+    <h1 class="titulo">Sua Sacola</h1>
 
-<div class="item">
-    <p>Hambúrguer - R$ 25,00</p>
-</div>
+    <div id="lista-sacola" class="menu-grid">
+        <!-- JS vai preencher -->
+    </div>
 
-<p><strong>Total: R$ 55,00</strong></p>
+    <div class="total-box">
+        <span>Total:</span>
+        <span id="total">R$ 0,00</span>
+    </div>
 
-<button>Finalizar Pedido</button>
+    <button class="finalizar-btn" onclick="finalizarPedido()">
+        Finalizar Pedido
+    </button>
+</main>
 
+<script src="{{ asset('assets/js/script.js') }}"></script>
 </body>
 </html>

@@ -1,0 +1,261 @@
+/* ==========================================
+   RESET E BASE
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #3a3a52;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f0e8;
+    padding: 15px 40px;
+    border-bottom: 3px solid #c0c0c0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-circle {
+    width: 45px;
+    height: 45px;
+    background-color: #6b1c1c;
+    border-radius: 50%;
+}
+
+.logo-text h1 {
+    color: #6b1c1c;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.logo-text span {
+    color: #888;
+    font-size: 14px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.cart-btn {
+    background-color: #6b1c1c;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: inherit;
+}
+
+.cart-btn:hover {
+    background-color: #8a2a2a;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   MAIN / TÍTULO
+   ========================================== */
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.titulo {
+    color: white;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   GRID DA SACOLA (cards dos itens)
+   ========================================== */
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Card de cada item na sacola */
+.menu-grid .card {
+    background-color: #d4d4d4;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.menu-grid .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.menu-grid .card h3 {
+    color: #444;
+    font-size: 20px;
+    font-weight: normal;
+    border-bottom: 2px solid #888;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.menu-grid .card .price {
+    color: #444;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Botão Remover */
+.menu-grid .card button {
+    margin-top: 10px;
+    background-color: #8b1a1a;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: inherit;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-grid .card button:hover {
+    background-color: #a52a2a;
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   SACOLA VAZIA
+   ========================================== */
+
+.menu-grid:empty::before {
+    content: "Sua sacola está vazia 🛒";
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 60px 0;
+}
+
+/* ==========================================
+   TOTAL
+   ========================================== */
+
+.total-box {
+    background-color: #f5f0e8;
+    border-radius: 12px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    margin: 30px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.total-box span:first-child {
+    color: #444;
+    font-size: 20px;
+}
+
+.total-box #total {
+    color: #6b1c1c;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* ==========================================
+   BOTÃO FINALIZAR
+   ========================================== */
+
+.finalizar-btn {
+    display: block;
+    margin: 30px auto;
+    background-color: #6b1c1c;
+    color: white;
+    padding: 14px 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: inherit;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.finalizar-btn:hover {
+    background-color: #8a2a2a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.finalizar-btn:active {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   RESPONSIVO
+   ========================================== */
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .logo-text h1 {
+        font-size: 22px;
+    }
+
+    .titulo {
+        font-size: 26px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .total-box {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .finalizar-btn {
+        width: 90%;
+        padding: 14px;
+    }
+}
